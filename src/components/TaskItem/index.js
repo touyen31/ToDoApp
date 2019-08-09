@@ -14,7 +14,7 @@ class TaskItem extends Component {
   render() {
     const { classes, item } = this.props
     return (
-      <Card key={item.id}>
+      <Card key={item.id} className={classes.container}>
         <CardContent>
           <Grid container justify="space-between">
             <Grid item md={8}>

@@ -4,9 +4,9 @@ import AddIcon from '@material-ui/icons/Add';
 
 export default class UIButton extends Component {
   render() {
-    const { title } = this.props;
+    const { title, handleClick } = this.props;
     return (
-      <Button variant="contained" color="secondary" >
+      <Button variant="contained" color="secondary" onClick={handleClick}>
         <AddIcon /> {title}
       </Button>
     )

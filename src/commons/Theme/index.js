@@ -13,7 +13,7 @@ const theme = createMuiTheme({
     borderRadius: 4,
     backgroundColor: '#e91e63',
     textColor: '#ffffff',
-    borderColor: '#cccccc'
+    borderColor: '#009688'
   }
 
 });

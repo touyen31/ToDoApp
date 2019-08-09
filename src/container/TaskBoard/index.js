@@ -6,6 +6,7 @@ import styles from './styles';
 import UIButton from '../../components/UIButton';
 import { STATUSES } from '../../constans';
 import TaskList from '../../components/TaskList';
+import TaskForm from '../../components/TaskForm';
 
 const listTask = [
   {
@@ -25,9 +26,27 @@ const listTask = [
     title: 'title 3',
     description: 'description 3',
     status: 1
+  },
+  {
+    id: 4,
+    title: 'title 4',
+    description: 'description 4',
+    status: 1
   }
 ]
 class TaskBoard extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      open: false
+    }
+  }
+  handleClose = () => {
+    this.setState({ open: false })
+  }
+  openDialog = () => {
+    this.setState({ open: true })
+  }
   renderBoard = () => {
     return (
       <Grid container spacing={5}>
@@ -44,11 +63,15 @@ class TaskBoard extends Component {
     )
   }
   render() {
-    const { classes } = this.props;
+    const {
+      props: { classes },
+      state: { open }
+    } = this;
     return (
       <div>
-        <UIButton title={'Thêm mới công việc'} />
+        <UIButton title={'Thêm mới công việc'} handleClick={this.openDialog} />
         {this.renderBoard()}
+        <TaskForm open={open} handleClose={this.handleClose} />
       </div>
     )
   }
