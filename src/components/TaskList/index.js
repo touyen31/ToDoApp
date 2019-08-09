@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core';
 
-import styles from './styles'
+import styles from './styles';
 import TaskItem from '../TaskItem';
 
 class TaskList extends Component {
   render() {
-    const { classes, listTask, status } = this.props
+    const { classes, listTask, status } = this.props;
     return (
       <div>
         {
@@ -16,7 +16,7 @@ class TaskList extends Component {
             )
         }
       </div>
-    )
+    );
   }
 }
-export default withStyles(styles)(TaskList)
+export default withStyles(styles)(TaskList);

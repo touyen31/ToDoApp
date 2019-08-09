@@ -9,6 +9,6 @@ const styles = theme => ({
   },
   Fab: {
 
-  }
-})
+  },
+});
 export default styles;

@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "semi": [2, "always"],
+    "quotes": [2, "single"],
+    "react/jsx-uses-react": 2,
+    "react/prop-types": "off",
+    "no-console": "off",
+    "no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "linebreak-style": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }
+    ]
+  }
+}

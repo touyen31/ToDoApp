@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import Fab from '@material-ui/core/Fab';
@@ -7,12 +7,12 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import styles from './styles'
+import styles from './styles';
 
 
 class TaskItem extends Component {
   render() {
-    const { classes, item } = this.props
+    const { classes, item } = this.props;
     return (
       <Card key={item.id} className={classes.container}>
         <CardContent>
@@ -31,7 +31,7 @@ class TaskItem extends Component {
             <Icon fontSize="small">delete_icon</Icon>
           </Fab>
         </CardActions>
-      </Card>)
+      </Card>);
   }
 }
-export default withStyles(styles)(TaskItem)
+export default withStyles(styles)(TaskItem);

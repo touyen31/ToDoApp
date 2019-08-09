@@ -6,7 +6,7 @@ const styles = () => ({
   shape: {
     padding: 20,
     margin: 10,
-    backgroundColor: 'green'
-  }
-})
+    backgroundColor: 'green',
+  },
+});
 export default styles;

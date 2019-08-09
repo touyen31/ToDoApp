@@ -10,6 +10,6 @@ const styles = theme => ({
     borderColor: theme.shape.borderColor,
     padding: 20,
     margin: 10,
-  }
-})
+  },
+});
 export default styles;

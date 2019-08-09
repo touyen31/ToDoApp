@@ -13,39 +13,39 @@ const listTask = [
     id: 1,
     title: 'title 1',
     description: 'description 1',
-    status: 0
+    status: 0,
   },
   {
     id: 2,
     title: 'title 2',
     description: '',
-    status: 2
+    status: 2,
   },
   {
     id: 3,
     title: 'title 3',
     description: 'description 3',
-    status: 1
+    status: 1,
   },
   {
     id: 4,
     title: 'title 4',
     description: 'description 4',
-    status: 1
-  }
-]
+    status: 1,
+  },
+];
 class TaskBoard extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      open: false
-    }
+      open: false,
+    };
   }
   handleClose = () => {
-    this.setState({ open: false })
+    this.setState({ open: false });
   }
   openDialog = () => {
-    this.setState({ open: true })
+    this.setState({ open: true });
   }
   renderBoard = () => {
     return (
@@ -60,12 +60,12 @@ class TaskBoard extends Component {
             </Grid>)
         }
       </Grid>
-    )
+    );
   }
   render() {
     const {
       props: { classes },
-      state: { open }
+      state: { open },
     } = this;
     return (
       <div>
@@ -73,7 +73,7 @@ class TaskBoard extends Component {
         {this.renderBoard()}
         <TaskForm open={open} handleClose={this.handleClose} />
       </div>
-    )
+    );
   }
 }
 export default withStyles(styles)(TaskBoard);

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Button from '@material-ui/core/Button'
+import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 
 export default class UIButton extends Component {
@@ -9,6 +9,6 @@ export default class UIButton extends Component {
       <Button variant="contained" color="secondary" onClick={handleClick}>
         <AddIcon /> {title}
       </Button>
-    )
+    );
   }
 }
